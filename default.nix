@@ -8,7 +8,7 @@ stdenv.mkDerivation {
 
   # Dependencies
   # See: https://nixos.org/nixpkgs/manual/#ssec-stdenv-dependencies
-  buildInputs = [ gnumake coreutils gcc ];
+  buildInputs = [ gnumake coreutils gcc openblas];
 
   # Build Phases
   # See: https://nixos.org/nixpkgs/manual/#sec-stdenv-phases

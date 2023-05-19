@@ -1,7 +1,9 @@
 all: hello
 
 hello:
-	g++ -std=c++11 ./hello.cpp -o hello
+	g++ -fopenmp -std=c++11 ./hello.cpp -o $@ -lopenblas
+
+inner_prod:
 
 clean:
 	rm hello
