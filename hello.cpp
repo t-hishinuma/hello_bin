@@ -1,6 +1,6 @@
-#include <iostream>
+#include <stdio.h>
 
 int main() {
-    std::cout << "Hello, My name is Toshiaki Hishinuma!" << std::endl;
+    printf("Hello, world! I am Toshiaki Hishionuma!\n");
     return 0;
 }
