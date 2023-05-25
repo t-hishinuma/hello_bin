@@ -12,3 +12,6 @@ package:
 clean:
 	- rm hello
 	- rm result
+
+test:
+	nix-shell --pure --run "make; ./hello"
