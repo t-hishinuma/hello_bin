@@ -25,6 +25,7 @@ stdenv.mkDerivation {
       coreutils
       gcc
       openblas
+      zsh
       (pkgs2305.rustup)
   ];
 
