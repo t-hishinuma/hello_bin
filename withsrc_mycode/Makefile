@@ -1,7 +1,7 @@
 all: hello
 
 hello: inner_prod.cpp
-	g++ -fopenmp -std=c++11 $< -o $@ -lopenblas
+	g++ -fopenmp -std=c++11 $< -o $@ -lopenblas -lfftw3
 
 nix:
 	nix-build
