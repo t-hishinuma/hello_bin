@@ -35,7 +35,8 @@ stdenv.mkDerivation {
       make
   '';
   installPhase = ''
-      cp ./hello /usr/bin/
+      mkdir -p $out/bin/
+      cp ./sample1 $out/bin/
   '';
 
   # nix-shell Hook

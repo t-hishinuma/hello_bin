@@ -3,6 +3,7 @@
 #include <string.h>
 
 #include <iostream>
+#include <mylib.hpp>
 #include <vector>
 
 void dot() {
@@ -32,5 +33,7 @@ void dot() {
 
 int main(int argc, char **argv) {
     dot();
+    mylib_hello();
+    std::cout << mylib_add(1.0, 2.0) << std::endl;
     return 0;
 }
