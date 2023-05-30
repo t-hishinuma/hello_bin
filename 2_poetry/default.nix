@@ -3,22 +3,17 @@
 with pkgs;
 
 stdenv.mkDerivation {
-  name = "1_inner_prod";
-
-  # Source Code
-  # See: https://nixos.org/nixpkgs/manual/#ssec-unpack-phase
+  name = "2_poetry";
   src = ./.;
 
   # Dependencies
-  # See: https://nixos.org/nixpkgs/manual/#ssec-stdenv-dependencies
   buildInputs = [ 
     python3
     poetry
     zlib
   ];
 
-  # Build Phases
-  # See: https://nixos.org/nixpkgs/manual/#sec-stdenv-phases
+  # Declare Nix Environment Variables
   configurePhase = ''
     declare -xp
   '';
