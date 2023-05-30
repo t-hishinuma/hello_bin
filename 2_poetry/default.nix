@@ -1,5 +1,15 @@
 { pkgs ? import <nixpkgs> {} }:
 
+let pkgs2205 = import (builtins.fetchTarball {
+        name = "nixos-22.05";
+        url = "https://github.com/NixOS/nixpkgs/archive/refs/tags/22.05.tar.gz";
+        }) {};
+in
+let pkgs2305 = import (builtins.fetchTarball {
+        name = "nixos-23.05";
+        url = "https://github.com/NixOS/nixpkgs/archive/refs/tags/23.05-beta.tar.gz";
+        }) {};
+in
 with pkgs;
 
 stdenv.mkDerivation {
@@ -8,8 +18,8 @@ stdenv.mkDerivation {
 
   # Dependencies
   buildInputs = [ 
-    python3
-    poetry
+    pkgs2305.python3
+    pkgs2205.poetry
     zlib
   ];
 
