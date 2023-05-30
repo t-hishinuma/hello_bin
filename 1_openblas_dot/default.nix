@@ -11,8 +11,8 @@ stdenv.mkDerivation {
   buildInputs = [ 
       gnumake
       coreutils
-      gcc
       openblas
+      gcc
   ];
 
   # Declare Nix Environment Variables
@@ -26,10 +26,24 @@ stdenv.mkDerivation {
       mkdir -p $out/bin/
       cp ./sample1 $out/bin/
   '';
-
-  # nix-shell Hook
-  shellHook =
-  ''
-    echo "Hello shell"
-  '';
 }
+
+
+# Many phases exsist. Each phase can be overridden
+# prePhases
+# unpackPhase
+# patchPhase
+# preConfigurePhases
+# configurePhase
+# preBuildPhases 
+# buildPhase 
+# checkPhase
+# preInstallPhases
+# installPhase
+# fixupPhase
+# installCheckPhase
+# preDistPhases
+# distPhase
+# postPhases
+
+# and shell hook (I will use this 2nd example)
